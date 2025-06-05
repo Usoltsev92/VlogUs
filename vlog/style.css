@@ -113,20 +113,6 @@ nav {
     margin: 0 auto 2rem;              /* Центрирование и отступ */
 }
 
-/* Стили кнопки */
-.btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.8rem 1.5rem;           /* Внутренние отступы */
-    border-radius: 50px;               /* Скругленные углы */
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: all 0.3s;             /* Анимация всех свойств */
-    border: none;
-    cursor: pointer;
-}
 
 /* Эффект при наведении на кнопку */
 .btn:hover {
