@@ -1,0 +1,64 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f2f5;
+}
+
+/* Контейнер квиза */
+.quiz-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль вопроса */
+.question {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Блок с вариантами ответов */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Стиль кнопок-ответов */
+button {
+    padding: 12px;
+    background: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #3700b3;
+    transform: translateY(-2px);
+}
+
+/* Стиль результата */
+.result {
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 1.5em;
+    color: #6200ea;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Анимация появления результата */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
