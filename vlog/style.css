@@ -3,62 +3,89 @@
  * Можно быстро изменить цвета во всем сайте, редактируя только эти значения
  */
 :root {
-    --primary-color: #2c3e50;       /* Основной цвет (темно-синий) */
-    --secondary-color: #3498db;     /* Вторичный цвет (голубой) */
-    --accent-color: #e74c3c;        /* Акцентный цвет (красный) */
-    --light-color: #ecf0f1;         /* Светлый фон */
-    --dark-color: #2c3e50;          /* Темный фон */
-    --text-color: #333;             /* Основной цвет текста */
-    --text-light: #7f8c8d;          /* Светлый текст (для подписей) */
+    --primary-color: #2c3e50;
+    /* Основной цвет (темно-синий) */
+    --secondary-color: #3498db;
+    /* Вторичный цвет (голубой) */
+    --accent-color: #e74c3c;
+    /* Акцентный цвет (красный) */
+    --light-color: #ecf0f1;
+    /* Светлый фон */
+    --dark-color: #2c3e50;
+    /* Темный фон */
+    --text-color: #333;
+    /* Основной цвет текста */
+    --text-light: #7f8c8d;
+    /* Светлый текст (для подписей) */
 }
 
 /* Сброс стандартных стилей браузера */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Правильная модель размеров с учетом padding и border */
+    box-sizing: border-box;
+    /* Правильная модель размеров с учетом padding и border */
 }
 
 /* Основные стили страницы */
 body {
-    font-family: 'Roboto', sans-serif; /* Основной шрифт для текста */
-    line-height: 1.6;                 /* Межстрочный интервал */
-    color: var(--text-color);          /* Цвет текста из переменной */
-    background-color: #f5f5f5;         /* Цвет фона страницы */
+    font-family: 'Roboto', sans-serif;
+    /* Основной шрифт для текста */
+    line-height: 1.6;
+    /* Межстрочный интервал */
+    color: var(--text-color);
+    /* Цвет текста из переменной */
+    background-color: #f5f5f5;
+    /* Цвет фона страницы */
 }
 
 /* Контейнер для центрирования контента */
 .container {
-    max-width: 1200px;    /* Максимальная ширина контента */
-    margin: 0 auto;       /* Центрирование по горизонтали */
-    padding: 0 20px;      /* Отступы по бокам на мобильных */
+    max-width: 1200px;
+    /* Максимальная ширина контента */
+    margin: 0 auto;
+    /* Центрирование по горизонтали */
+    padding: 0 20px;
+    /* Отступы по бокам на мобильных */
 }
 
 /* Стили шапки сайта */
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem 0;                  /* Внутренние отступы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта "приподнятости" */
-    position: sticky;                 /* Липкая шапка */
-    top: 0;                           /* Прилипает к верху экрана */
-    z-index: 100;                     /* Поверх других элементов */
+    padding: 1rem 0;
+    /* Внутренние отступы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Тень для эффекта "приподнятости" */
+    position: sticky;
+    /* Липкая шапка */
+    top: 0;
+    /* Прилипает к верху экрана */
+    z-index: 100;
+    /* Поверх других элементов */
 }
 
 /* Навигационное меню */
 nav {
-    display: flex;                    /* Гибкий контейнер */
-    justify-content: space-between;   /* Распределение пространства */
-    align-items: center;              /* Вертикальное выравнивание */
+    display: flex;
+    /* Гибкий контейнер */
+    justify-content: space-between;
+    /* Распределение пространства */
+    align-items: center;
+    /* Вертикальное выравнивание */
 }
 
 /* Стили логотипа */
 .logo {
-    font-family: 'Montserrat', sans-serif; /* Отличный от основного шрифт */
-    font-weight: 600;                     /* Полужирное начертание */
-    font-size: 1.5rem;                    /* Размер шрифта */
+    font-family: 'Montserrat', sans-serif;
+    /* Отличный от основного шрифт */
+    font-weight: 600;
+    /* Полужирное начертание */
+    font-size: 1.5rem;
+    /* Размер шрифта */
     color: white;
-    text-decoration: none;                /* Убираем подчеркивание */
+    text-decoration: none;
+    /* Убираем подчеркивание */
 }
 
 /* Часть логотипа с другим цветом */
@@ -69,12 +96,14 @@ nav {
 /* Список навигационных ссылок */
 .nav-links {
     display: flex;
-    list-style: none; /* Убираем маркеры списка */
+    list-style: none;
+    /* Убираем маркеры списка */
 }
 
 /* Элементы навигации */
 .nav-links li {
-    margin-left: 2rem; /* Отступ между пунктами */
+    margin-left: 2rem;
+    /* Отступ между пунктами */
 }
 
 /* Стили ссылок в навигации */
@@ -83,7 +112,8 @@ nav {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+    transition: color 0.3s;
+    /* Плавное изменение цвета при наведении */
 }
 
 /* Эффект при наведении на ссылку */
@@ -95,8 +125,10 @@ nav {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: 5rem 0;                  /* Большие отступы */
-    text-align: center;               /* Центрирование текста */
+    padding: 5rem 0;
+    /* Большие отступы */
+    text-align: center;
+    /* Центрирование текста */
 }
 
 /* Заголовок в герой-секции */
@@ -109,16 +141,10 @@ nav {
 /* Текст в герой-секции */
 .hero p {
     font-size: 1.2rem;
-    max-width: 800px;                 /* Ограничение ширины для читаемости */
-    margin: 0 auto 2rem;              /* Центрирование и отступ */
-}
-
-
-/* Эффект при наведении на кнопку */
-.btn:hover {
-    background-color: #c0392b;        /* Темнее основной цвет */
-    transform: translateY(-3px);      /* Сдвиг вверх */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
+    max-width: 800px;
+    /* Ограничение ширины для читаемости */
+    margin: 0 auto 2rem;
+    /* Центрирование и отступ */
 }
 
 /* Стили секции "Обо мне" */
@@ -130,7 +156,8 @@ nav {
 /* Заголовки секций */
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;              /* Большой отступ снизу */
+    margin-bottom: 3rem;
+    /* Большой отступ снизу */
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-color);
 }
@@ -138,13 +165,16 @@ nav {
 /* Контейнер для контента "Обо мне" */
 .about-content {
     display: flex;
-    align-items: center;              /* Выравнивание по вертикали */
-    gap: 3rem;                        /* Расстояние между колонками */
+    align-items: center;
+    /* Выравнивание по вертикали */
+    gap: 3rem;
+    /* Расстояние между колонками */
 }
 
 /* Текстовая часть */
 .about-text {
-    flex: 1;                          /* Занимает доступное пространство */
+    flex: 1;
+    /* Занимает доступное пространство */
 }
 
 /* Подзаголовок в тексте */
@@ -162,9 +192,12 @@ nav {
 
 /* Стили изображения */
 .about-image img {
-    max-width: 100%;                  /* Адаптивность */
-    border-radius: 10px;              /* Скругленные углы */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
+    max-width: 100%;
+    /* Адаптивность */
+    border-radius: 10px;
+    /* Скругленные углы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Тень */
 }
 
 /* Стили секции увлечений */
@@ -178,7 +211,8 @@ nav {
     display: grid;
     /* Автоматическое создание колонок (минимум 300px) */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;                        /* Расстояние между карточками */
+    gap: 2rem;
+    /* Расстояние между карточками */
 }
 
 /* Стили карточки увлечения */
@@ -187,12 +221,14 @@ nav {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;       /* Анимация трансформации */
+    transition: transform 0.3s;
+    /* Анимация трансформации */
 }
 
 /* Эффект при наведении на карточку */
 .interest-card:hover {
-    transform: translateY(-10px);     /* Поднимаем карточку */
+    transform: translateY(-10px);
+    /* Поднимаем карточку */
 }
 
 /* Стили иконок в карточках */
@@ -220,8 +256,10 @@ footer {
 /* Контейнер контента в подвале */
 .footer-content {
     display: flex;
-    flex-direction: column;           /* Вертикальное расположение */
-    align-items: center;              /* Центрирование по горизонтали */
+    flex-direction: column;
+    /* Вертикальное расположение */
+    align-items: center;
+    /* Центрирование по горизонтали */
 }
 
 /* Список социальных сетей */
@@ -233,14 +271,17 @@ footer {
 
 /* Элементы социальных сетей */
 .social-links li {
-    margin: 0 1rem;                   /* Отступы между иконками */
+    margin: 0 1rem;
+    /* Отступы между иконками */
 }
 
 /* Ссылки социальных сетей */
 .social-links a {
     color: white;
-    font-size: 1.5rem;                /* Размер иконок */
-    transition: color 0.3s;           /* Плавное изменение цвета */
+    font-size: 1.5rem;
+    /* Размер иконок */
+    transition: color 0.3s;
+    /* Плавное изменение цвета */
 }
 
 /* Эффект при наведении на иконку */
@@ -257,16 +298,17 @@ footer {
 
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
+
     /* На мобильных меняем направление flex на вертикальное */
     .about-content {
         flex-direction: column;
     }
-    
+
     /* Скрываем навигацию на мобильных (можно заменить на бургер-меню) */
     .nav-links {
         display: none;
     }
-    
+
     /* Уменьшаем размер заголовка */
     .hero h1 {
         font-size: 2rem;
