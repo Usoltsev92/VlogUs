@@ -1,20 +1,5 @@
-/* 
- * CSS-переменные для удобного управления цветовой схемой 
- * Можно быстро изменить цвета во всем сайте, редактируя только эти значения
- */
-/* 
-:root {
-    --primary-color: #1a1a2e;
-    --secondary-color: #4a4e69;
-    --accent-color: #f8bbd0;
-    --light-color: #47413d;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --text-light: #7f8c8d;
- 
-}
-   */
-   
+
+
 :root {
     --primary-color: #1a1a2e;
     /* Темно-синий (основной) */
@@ -29,6 +14,8 @@
     --text-color: #333;
     /* Основной текст */
     --text-light: #9a8c98;
+
+
     /* Светлый текст */
     --highlight-color: #c9ada7;
     /* Бежево-коричневый */
