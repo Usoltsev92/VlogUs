@@ -165,7 +165,7 @@ nav {
     margin-bottom: 3rem;
     /* Большой отступ снизу */
     font-family: 'Montserrat', sans-serif;
-    color: var(--dark-color);
+    color: white ;
 }
 
 /* Контейнер для контента "Обо мне" */
