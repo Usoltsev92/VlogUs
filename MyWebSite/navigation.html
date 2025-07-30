@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Усольцев Александр | Мой влог</title>
+    <title>Мои работы | Усольцев Александр</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -122,114 +122,90 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-primary);
+            text-decoration: none;
+            border: 1px solid var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
         }
 
-        /* Секции */
-        section {
+        .back-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Галерея работ */
+        .portfolio {
             padding: 80px 0;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: var(--text-primary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            height: 3px;
-            background: var(--accent-gradient);
-        }
-
-        /* Обо мне */
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-text h3 {
-            color: var(--text-primary);
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Увлечения */
-        .interest-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            animation: fadeIn 0.8s ease-out forwards;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .interest-card {
+        .project-card {
             background: var(--card-bg);
-            padding: 30px;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .interest-card:hover {
+        .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            background-color: #252525;
         }
 
-        .interest-card i {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .project-image {
+            height: 200px;
+            overflow: hidden;
         }
 
-        .interest-card h3 {
-            margin-bottom: 15px;
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
             color: var(--text-primary);
         }
 
-        .interest-card p {
+        .project-info p {
             color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(106, 90, 205, 0.4);
         }
 
         /* Подвал */
@@ -273,12 +249,6 @@
             color: var(--text-secondary);
         }
 
-        /* Анимации */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* Медиа-запросы для мобильных устройств */
         @media (max-width: 768px) {
             .nav-links {
@@ -314,28 +284,7 @@
                 font-size: 2rem;
             }
             
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-text, .about-image {
-                min-width: 100%;
-            }
-            
-            .interest-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -352,9 +301,8 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#interests">Увлечения</a></li>
-                    <li><a href="MyWebSite/navigation.html">Мои программы</a></li>
+                    <li><a href="#projects">Мои работы</a></li>
+                    <li><a href="vlog/nav/pageProgram.html">Мои программы</a></li>
                 </ul>
             </nav>
         </div>
@@ -363,59 +311,87 @@
     <!-- Герой-секция -->
     <section class="hero">
         <div class="container">
-            <h1>Приветствую вас на моём сайте! 👋</h1>
-            <p>Меня зовут Усольцев Александр, я хочу быть разработчиком!</p>
+            <h1>Мои созданные сайты</h1>
+            <p>Здесь собраны все мои проекты и работы в веб-разработке</p>
+            <a href="index.html" class="back-link">Вернуться на главную</a>
         </div>
     </section>
 
-    <!-- Секция "Обо мне" -->
-    <section id="about" class="about">
+    <!-- Галерея работ -->
+    <section id="projects" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Обо мне</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Системный администратор и IT-специалист</h3>
-                    <p>Я занимаюсь системным администрированием и увлекаюсь IT-технологиями. В свободное время люблю
-                        изучать программирование, заниматься спортом и наслаждаться вождением.</p>
-                    <p>Здесь я делюсь своими знаниями, проектами и мыслями. Надеюсь, вам будет интересно!</p>
-                    <p>Моя цель - постоянно развиваться в профессиональном плане, осваивать новые технологии и находить
-                        эффективные решения сложных задач.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://avatars.mds.yandex.net/get-entity_search/28506/962888985/S600xU_2x" alt="Александр Усольцев">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция увлечений -->
-    <section id="interests" class="interests">
-        <div class="container">
-            <h2 class="section-title">Мои увлечения</h2>
-            <div class="interest-grid">
-                <div class="interest-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Системное администрирование</h3>
-                    <p>Решение сложных технических задач и оптимизация систем.</p>
-                </div>
-                <a href="MyWebSite/navigation.html" style="text-decoration: none;">
-                    <div class="interest-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Программирование</h3>
-                        <p>Изучение новых языков и технологий, разработка собственных проектов, автоматизация рутинных
-                            задач.</p>
+            <h2 class="section-title">Портфолио проектов</h2>
+            <div class="projects-grid">
+                <!-- Проект 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Проект 1">
                     </div>
-                </a>
-                <div class="interest-card">
-                    <i class="fas fa-car"></i>
-                    <h3>Вождение</h3>
-                    <p>Наслаждение процессом вождения, изучение автомобильных технологий, путешествия на автомобиле.</p>
+                    <div class="project-info">
+                        <h3>Корпоративный сайт</h3>
+                        <p>Современный адаптивный сайт для бизнеса с CMS системой управления контентом.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
                 </div>
-                <div class="interest-card">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Спорт</h3>
-                    <p>Поддержание физической формы, силовые тренировки, активный образ жизни для баланса с умственной
-                        деятельностью.</p>
+
+                <!-- Проект 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Проект 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Интернет-магазин</h3>
+                        <p>Полнофункциональный магазин с корзиной, оплатой и личным кабинетом.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
+                </div>
+
+                <!-- Проект 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Проект 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Лендинг продукта</h3>
+                        <p>Продающая страница для нового продукта с высокой конверсией.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
+                </div>
+
+                <!-- Проект 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Проект 4">
+                    </div>
+                    <div class="project-info">
+                        <h3>Блог платформа</h3>
+                        <p>Система для ведения блога с комментариями и тегами.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
+                </div>
+
+                <!-- Проект 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+5" alt="Проект 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>Панель администратора</h3>
+                        <p>Комплексная система управления данными с аналитикой.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
+                </div>
+
+                <!-- Проект 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Project+6" alt="Проект 6">
+                    </div>
+                    <div class="project-info">
+                        <h3>Мобильное приложение</h3>
+                        <p>Гибридное приложение для iOS и Android с веб-интерфейсом.</p>
+                        <a href="#" class="project-link">Посмотреть</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -432,7 +408,6 @@
                     <li><a href="https://github.com/Usoltsev92"><i class="fab fa-github"></i></a></li>
                 </ul>
                 <p class="copyright">&copy; 1992 Усольцев Александр.</p>
-                <p>Сайт был создан при помощи нейросетей.</p>
             </div>
         </div>
     </footer>
