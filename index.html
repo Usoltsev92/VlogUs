@@ -106,19 +106,9 @@
         </div>
     </footer>
 
-    <script>
-        // Мобильное меню
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
 
-        // Закрытие меню при клике на ссылку
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-    </script>
+    <script src="vlog/mainPage/menu.js"></script>
+
 </body>
 
 </html>
