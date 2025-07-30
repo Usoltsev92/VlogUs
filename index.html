@@ -1,40 +1,299 @@
 <!DOCTYPE html>
-<!-- Определение типа документа как HTML5 -->
 <html lang="ru">
-<!-- Указываем язык страницы - русский -->
 
 <head>
-    <!-- Метаданные и настройки страницы -->
     <meta charset="UTF-8">
-    <!-- Кодировка документа (поддержка кириллицы) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Настройки адаптивности для мобильных устройств -->
-    <title> Усольцев Александр | Мой влог </title>
-    <!-- Заголовок страницы (отображается во вкладке браузера) -->
-
-    <!-- Подключение внешних ресурсов -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap">
-    <!-- Google Fonts - шрифты Montserrat и Roboto -->
+    <title>Усольцев Александр | Мой влог</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font Awesome для иконок -->
-    <link rel="stylesheet" href="../VlogUs/vlog/style.css">
-    <!-- Основная таблица стилей -->
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .logo span {
+            color: #4a6bff;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4a6bff;
+        }
+        
+        /* Гамбургер меню для мобильных */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Герой секция */
+        .hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background-color: #4a6bff;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Секции */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        /* Обо мне */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Увлечения */
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .interest-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .interest-card i {
+            font-size: 2.5rem;
+            color: #4a6bff;
+            margin-bottom: 20px;
+        }
+        
+        .interest-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .footer-content h3 {
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .social-links li {
+            margin: 0 10px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #4a6bff;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            /* Навигация */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            /* Герой */
+            .hero {
+                padding: 100px 0 40px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            /* Секции */
+            section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            /* Обо мне */
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-image {
+                min-width: 100%;
+            }
+            
+            /* Карточки увлечений */
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Шапка сайта -->
     <header>
         <div class="container">
-            <!-- Навигационное меню -->
             <nav>
-                <!-- Логотип с акцентным цветом -->
                 <p class="logo">Usoltsev<span>92</span></p>
-
-                <!-- Основные навигационные ссылки -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Главная</a></li>
-                  
                     <li><a href="#about">Обо мне</a></li>
                     <li><a href="#interests">Увлечения</a></li>
                     <li><a href="vlog/nav/pageProgram.html">Мои программы</a></li>
@@ -43,19 +302,18 @@
         </div>
     </header>
 
-    <!-- Герой-секция (первый экран) -->
+    <!-- Герой-секция -->
     <section class="hero">
         <div class="container">
             <h1>Приветствую вас на моём сайте! 👋</h1>
-            <p>Меня зовут Усольцев Александр, я хочу быть разработчиком! </p>
+            <p>Меня зовут Усольцев Александр, я хочу быть разработчиком!</p>
         </div>
     </section>
 
     <!-- Секция "Обо мне" -->
     <section id="about" class="about">
-        <div class="textForMe">
+        <div class="container">
             <h2 class="section-title">Обо мне</h2>
-            <!-- Контент в два столбца (текст + изображение) -->
             <div class="about-content">
                 <div class="about-text">
                     <h3>Системный администратор и IT-специалист</h3>
@@ -66,7 +324,6 @@
                         эффективные решения сложных задач.</p>
                 </div>
                 <div class="about-image">
-                    <!--  фото -->
                     <img src="vlog/websiteContent/celica.jpg" alt="Александр Усольцев">
                 </div>
             </div>
@@ -77,14 +334,11 @@
     <section id="interests" class="interests">
         <div class="container">
             <h2 class="section-title">Мои увлечения</h2>
-            <!-- Сетка карточек с увлечениями -->
             <div class="interest-grid">
-                <!-- Карточка 1 -->
                 <div class="interest-card">
-                    <i class="fas fa-server"></i> <!-- Иконка -->
+                    <i class="fas fa-server"></i>
                     <h3>Системное администрирование</h3>
-                    <p>Решение сложных технических
-                        задач и оптимизация систем.</p>
+                    <p>Решение сложных технических задач и оптимизация систем.</p>
                 </div>
                 <a href="vlog/nav/pageProgram.html" style="text-decoration: none;">
                     <div class="interest-card">
@@ -94,14 +348,11 @@
                             задач.</p>
                     </div>
                 </a>
-                </a>
-                <!-- Карточка 3 -->
                 <div class="interest-card">
                     <i class="fas fa-car"></i>
                     <h3>Вождение</h3>
                     <p>Наслаждение процессом вождения, изучение автомобильных технологий, путешествия на автомобиле.</p>
                 </div>
-                <!-- Карточка 4 -->
                 <div class="interest-card">
                     <i class="fas fa-dumbbell"></i>
                     <h3>Спорт</h3>
@@ -118,17 +369,27 @@
             <div class="footer-content">
                 <h3>Усольцев Александр</h3>
                 <p>Системный администратор</p>
-                <!-- Социальные сети -->
                 <ul class="social-links">
                     <li><a href="https://t.me/Usoltsev92"><i class="fab fa-telegram"></i></a></li>
                     <li><a href="https://github.com/Usoltsev92"><i class="fab fa-github"></i></a></li>
-
                 </ul>
-                <!-- Копирайт -->
                 <p class="copyright">&copy; 1992 Усольцев Александр.</p>
             </div>
         </div>
     </footer>
-</body>
 
+    <script>
+        // Мобильное меню
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
 </html>
